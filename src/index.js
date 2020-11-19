@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter, Switch, Route} from 'react-router-dom';
+import {HashRouter, Switch, Route} from 'react-router-dom';
 import ReactDom from 'react-dom';
 import Container from './components/Container';
 import Shop from './components/Shop';
@@ -12,7 +12,7 @@ import './css/style.css';
 
 const Body = (props) => {
     return (
-        <BrowserRouter>
+        <HashRouter>
         <CartProvider>
             <Navbar />
             <Switch>
@@ -27,7 +27,7 @@ const Body = (props) => {
                 </Route>
             </Switch>  
             </CartProvider> 
-        </BrowserRouter>
+        </HashRouter>
     )
 }
 ReactDom.render(<Body />, document.querySelector('#root'))
